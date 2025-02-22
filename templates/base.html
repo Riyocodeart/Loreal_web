@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}My flask App{% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='product.css') }}">
+
+</head>
+
+<body>
+    <header>
+        <!-- Navigation Bar -->
+        <nav style="color:aliceblue" class="navbar bg-body-tertiary">
+            <ul class="flex space-x-4 justify-center">
+
+                <li><a href="/" class="Hover">Home</a></li>
+                <li><a href="/Login" class="Hover">Login</a></li>
+                <li><a href="/users" class="Hover">Contact</a></li>
+                <li><a href="/profile" class="Hover">Profile</a></li>
+                <li><a href="/about" class="Hover">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+        <!-- Content of Child Templates -->
+        <div class="container">
+            {% block content %}{% endblock %}
+        </div>
+
+<footer>
+    <h3>Follow Us</h3>
+                
+                <p>Email: support@loreal.com</p>
+                <p>Phone: +1 234 567 890</p>
+</footer>
+</body>
+
+</html>

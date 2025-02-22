@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}Login - My Flask App{% endblock %}
+
+{% block content %}
+
+    <h1>login</h1>
+    <form action="/Login" method="post">
+        <input type="text" name="username" required /><br><br>
+        <input type="email" name="email" required /><br><br>
+        <input type="submit" />
+    </form>
+
+{% endblock %}    
