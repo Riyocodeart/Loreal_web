@@ -16,8 +16,12 @@ nav{
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    background-color:rgba(98, 1, 1, 0.986);
+    background-color:#620101;
     padding: 15px 0;
+    width: auto;
+    /* position: fixed; */
+    z-index: 1000;
+
 }
 
 nav ul {
@@ -119,23 +123,101 @@ input:checked + .slider::after {
 
 /* Main Section */
 section {
+    position: relative;
     display: flex;
-   margin-top: 10px;
+    margin-top: 10px;
     align-items: center;
     justify-content: center;
     text-align: center;
     padding: 20px;
 }
 
+section.scroll-content {
+    width: 80%;
+    max-width: 800px;
+    height: 500px;
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    scrollbar-width: thin;
+}
 
 
+
+
+
+
+/* Ensure the full screen setup */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Keeps images in place */
+.image-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: black;
+    position: fixed; /* Keeps images fixed */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+}
+
+
+
+/* Ensures images keep their original size */
+.image-container img {
+    width: auto;
+    height: 250px; /* Adjust as needed */
+    border-radius: 10px;
+}
+
+/* Scrollable content below the images */
+.scroll-content {
+    width: 80%;
+    max-width: 800px;
+    margin-top: 280px; /* Adjust to leave space for images */
+    height: 500px; /* Adjust as needed */
+    overflow-y: auto;
+    background: rgba(255, 255, 255, 0.1); /* Light background effect */
+    padding: 20px;
+    border-radius: 10px;
+    scrollbar-width: thin;
+}
+
+/* Custom Scrollbar */
+.scroll-content::-webkit-scrollbar {
+    width: 5px;
+}
+
+.scroll-content::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 5px;
+}
 
 /* Footer */
 footer {
-    background-color:rgba(98, 1, 1, 0.986);
-    height: 5vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 14px;
+    position:relative;
+    width: 100%;
+    text-align: center;
+    background-color: maroon;
+    color: white;
+    padding: 1px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
 }
+
